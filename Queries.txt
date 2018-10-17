@@ -3,3 +3,5 @@ SELECT * FROM studenten WHERE straat != 'Duckstraat';
 SELECT * FROM studenten WHERE geboortedatum > '1900-01-01' AND telefoon != 'geen';
 
 SELECT * FROM studenten WHERE achternaam LIKE 'De %';
+
+SELECT studenten.student_id, tests.student_id FROM studenten INNER JOIN tests ON studenten.student_id = tests.student_id;
